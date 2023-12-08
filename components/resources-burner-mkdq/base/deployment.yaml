@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: resources-burner-mkdq
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: resources-burner-mkdq
+    app.kubernetes.io/part-of: load-app-54ee25fe-e3d3-44d4-92e4-f97a2e1c5f47
+  name: resources-burner-mkdq
+spec:
+  revisionHistoryLimit: 0
+  selector:
+    matchLabels:
+      app.kubernetes.io/instance: resources-burner-mkdq
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app.kubernetes.io/instance: resources-burner-mkdq
+    spec:
+      containers:
+      - image: image
+        imagePullPolicy: Always
+        name: container-image
+        resources: {}
+status: {}
